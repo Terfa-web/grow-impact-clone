@@ -4,6 +4,66 @@
   --color-accent:   #543c03;
   --color--headings: #231f20;
   --color-body: #000;
-  
+  --subheading-size: 2rem;
+  --cardheader-color: #7bdcb5;
+}
+
+/* Typography */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--color-body);
+  font-size: 1.5rem
+}
+
+h2  h4 {
+  color: var(--color--headings);
+}
+
+h2, h3, h4 {
+  margin: 1rem;
+}
+
+
+h2 {
+  font-size: 8rem;
+  font-weight: 400;
+}
+
+h3 {
+  color: var(--color-accent);
+  font-size: 7rem;
+  font-weight: 550;
+}
+
+
+
+h4 { 
+  font-size: 2.8rem;
+}
+
+.subheading {
+  font-size: var(--subheading-size);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 9rem;
+  }
+  h3 {
+    font-size: 8rem;
+  }
+  h4 {
+    font-size: 2.4rem;
+  }
+  .subheading {
+    font-size: calc(--subheading-size) + 1rem;
+  }
 }
 
