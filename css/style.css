@@ -134,7 +134,7 @@ fill: white;
   
 }
 
-.centent__header {
+.header__content {
   text-align: center;
 }
 
@@ -175,12 +175,32 @@ iframe {
   margin: 2rem auto;
 }
 
-
-
 @media screen and (min-width: 768px){
     .para-bold {
       max-width: 150px;
       align-self: flex-start;
       text-align: left;
     }
+}
+
+/* Features */
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.features .feature__paragraph1 {
+  font-size: 2rem;
+  transition: color 0.5s ease-in-out;
+}
+
+.feature__paragraph1, .feature__paragraph2 {
+  max-width: 500px;
+  text-align: center;
+}
+
+.feature__paragraph1:hover {
+  color: var(--color-primary)
 }
