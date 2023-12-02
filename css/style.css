@@ -6,6 +6,7 @@
   --color-body: #000;
   --subheading-size: 2rem;
   --cardheader-color: #ebfbfa;
+  --background-color:  #eafff7;
 }
 
 /* Typography */
@@ -74,6 +75,7 @@ h4 {
   font-weight: 600;
 }
 
+
 /* Icons */
 .icon {
 height: 50px;
@@ -97,6 +99,108 @@ fill: white;
   transform: scale(0.9);
   box-shadow: 0 0 20px #fff;
 }
+
+/* Navbar */
+.navbar {
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.navbar__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  align-items: center;
+  
+}
+.navbar .logo {
+  width: 8rem;
+}
+.navbar .collapsible__content .list > li {
+  text-align: center;
+  margin-bottom: 4rem;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.navbar .collapsible__content .list > li:hover {
+  color: var(--color-primary);
+} 
+
+.collapsible__content {
+  display: none; 
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  align-self: center;
+}
+
+.menu-icon {
+  transform: rotate(-180deg);
+  transition: transform 0.3s step-end;  
+  color: var(--color-accent);  
+}
+
+.collapsible--expanded .menu-icon {
+  transform: rotate(90deg);
+  text-decoration: overline;
+} 
+
+.collapsible--expanded .collapsible__content {
+  display:block;
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/* when the screen is below 768px */
+.secondary-navbar {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar .menu-icon {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .list-item.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .secondary-navbar {
+    display: block;
+    background: var(--background-color); 
+  }
+  .navbar {
+    display: none;
+  }
+
+  .secondary-collapsible__content .list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 3rem;
+  }
+
+  .secondary-navbar .logo {
+    width: 8rem;
+    margin: 0 3rem;
+  }
+
+  .secondary-navbar .list-item {
+    cursor: pointer;
+    transition: color 0.4s ease-out;
+  }
+
+  .secondary-navbar .list-item:hover {
+    color: var(--color-primary)
+  }
+}
+
 
 /* Buttons */
 .btn {
@@ -235,7 +339,7 @@ iframe {
 
 /* Donation */
 .donation {
-  background: #eafff7;
+  background: var(--background-color);
   padding: 13rem 2rem;
   display: flex;
   flex-direction: column;

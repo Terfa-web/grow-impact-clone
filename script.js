@@ -1,13 +1,7 @@
-const cardParagraph = document.querySelector('.para-bold');
+const navbarHeader = document.querySelector('.navbar__header');
 
-let text = cardParagraph.textContent.split(" ")
-let header = document.querySelector('.card__header')
+const navbar = document.querySelector('.navbar')
 
-
-
-window.addEventListener('resize', function(event) {
-  while(window.innerWidth >= '768px') {
-    console.log('resize')
-  }
-    
+document.addEventListener('click', function() {
+  navbar.classList.toggle('collapsible--expanded')
 })
