@@ -174,6 +174,7 @@ fill: white;
   .secondary-navbar {
     display: block;
     background: var(--background-color); 
+    padding: 4rem 2rem;
   }
   .navbar {
     display: none;
@@ -282,12 +283,14 @@ iframe {
   margin: 2rem auto;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 769px){
      .para-bold {
       max-width: 150px;
       align-self: flex-end;
       text-align: left;
     }
+
+    
 }
 
 /* Features */
@@ -373,7 +376,7 @@ iframe {
 /* Donation */
 .donation {
   background: var(--background-color);
-  padding: 13rem 2rem;
+  padding: 13rem 12rem;
   display: flex;
   flex-direction: column;
   
@@ -404,7 +407,7 @@ iframe {
  
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 769px){
   .donation {
     flex-direction: row;
     justify-content: space-between; 
@@ -513,15 +516,22 @@ iframe {
   }
 }
 
-/* hero component */
+/* hero component */  
+
 .hero .bckgrnd {
   width: 100%;
   height: 100vh;
   
 }
 
+.hero--content {
+  padding-right: 7rem;
+  padding-left: 7rem;
+}
+
+
 .block--skewed {
-  clip-path: polygon(50% 0%, 100% 1%, 100% 81%, 72% 67%, 27% 68%, 0 81%, 0 0);
+  clip-path: polygon(50% 0%, 100% 0%, 100% 81%, 72% 77%, 27% 68%, 0 81%, 0 0);
 }
 
 /* Hero */
@@ -587,23 +597,33 @@ iframe {
   font-weight: 700;
 }
 
+.card__header .intro {
+  font-weight: 700;
+  scale: 1.2
+}
+
+/* Mission */
 .mission .title {
   font-weight: 500;
   text-align: center;
   font-size: 7rem;
   line-height: 1.2;
- 
+  
 }
 
-.mission__paragraph {
+.mission__paragraph1, .mission__paragraph2 {
   text-align: center;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
   font-size: 1.3rem;
 }
 
+.mission__paragraph2 {
+  margin-top: 3rem;
+}
+
 .mission__content {
-  padding-bottom: 3rem;
-  max-width: 750px;
+  padding: 5rem 0;
+  max-width: 900px;
   margin:  2rem auto;
 }
 
@@ -614,14 +634,14 @@ iframe {
   align-items: center;
 }
 .interviews__content .card__container {
-  margin: 6rem 6rem;
+ 
 }
 
 .interviews .btn {
   align-self: center;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .interviews__content {
     display: grid;
     gap: 5rem;
